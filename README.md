@@ -15,6 +15,12 @@ App personal para llevar la lista de los pagos que hay que hacer cada mes, con u
 - **Pegar lista**: se copia la lista desde Notas y se pega en la app. Cada línea es un pago; una línea que termina en dos puntos (:) es el nombre de una sección.
 - **Respaldo**: copia todos los datos como texto y los restaura desde ahí.
 
+## Panel Casa
+
+Al final de la app está la tarjeta «Panel Casa». Con «Pegar código» (el código se copia en Panel Casa → Conexiones), la app publica en el buzón privado de GitHub el título del mes y cada pago con su estado, en el hito «Pagos · panel». Así se ve en Panel Casa. Se publica cada vez que cambia algo; «Desconectar» deja de publicar y vacía el hito.
+
+El módulo es el mismo en todas las apps conectadas y se copia desde el repositorio casa con `python3 herramientas/conectar-apps.py`.
+
 ## Instalar en el iPhone
 
 1. La app se publica con GitHub Pages en `https://pablocarvallo.github.io/pagos/`.
