@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
 <title>Pagos del mes</title>
 <!--STANDALONE:START-->
 <meta name="robots" content="noindex, nofollow">
@@ -426,6 +426,7 @@ h1, h2 { margin: 0; text-wrap: balance; }
 .pc-err[hidden] { display: none; }
 /*PANEL:CSS:END*/
 </style>
+<style>/* Sin zoom con los dedos ni con doble toque: se usa como app instalada, no como página */ html { touch-action: pan-x pan-y; }</style>
 </head>
 <body>
 
@@ -1183,6 +1184,13 @@ var PanelCasa = (function () {
     }) };
   } });
 /*PANEL:APP:END*/
+})();
+</script>
+<script>
+// Sin zoom con los dedos: Safari en iPhone no siempre respeta «user-scalable=no», así que se cortan sus gestos de zoom
+(function () {
+  ['gesturestart', 'gesturechange', 'gestureend'].forEach(function (t) { document.addEventListener(t, function (e) { e.preventDefault(); }, { passive: false }); });
+  document.addEventListener('touchmove', function (e) { if (e.touches && e.touches.length > 1) e.preventDefault(); }, { passive: false });
 })();
 </script>
 </body>
