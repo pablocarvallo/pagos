@@ -34,7 +34,7 @@ Se abre como app independiente, con su icono, y funciona sin conexión después 
 
 | Archivo | Uso |
 | --- | --- |
-| `index.html` | La app completa (HTML, CSS y JavaScript, sin dependencias ni compilación), con el sistema de diseño de las apps domésticas entre las marcas `DS:TOKENS` y `DS:LAYER` |
+| `index.html` | La app completa (HTML, CSS y JavaScript, sin dependencias ni compilación), con el sistema de diseño de las apps domésticas entre las marcas `DS:TOKENS`, `DS:VARS`, `DS:BASE` y `DS:APP` (la base común se copia desde el repositorio casa) |
 | `manifest.webmanifest` | Nombre, colores e iconos de la app instalada |
 | `sw.js` | Service worker para uso sin conexión |
 | `icons/icon-full.svg` | Icono original a pantalla completa (fuente de los PNG) |
