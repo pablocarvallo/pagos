@@ -1,5 +1,5 @@
 // Service worker mínimo: deja la app disponible sin conexión.
-const CACHE = 'pagos-v1-sinzoom';
+const CACHE = 'pagos-v1-sinzoom-b1';
 const ASSETS = [
   './',
   'index.html',
